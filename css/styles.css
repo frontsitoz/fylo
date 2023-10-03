@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+:root{
+    --VeryDarkBlue: hsl(243, 87%, 12%);
+    --DesaturatedBlue: hsl(238, 22%, 44%);
+
+    --BrightBlue: hsl(224, 93%, 58%);
+--ModerateCyan: hsl(170, 45%, 43%);
+
+--LightGrayishBlue: hsl(240, 75%, 98%);
+--LightGray: hsl(0, 0%, 75%);
+--fontHeader: 'Raleway', sans-serif;
+--padding-container: 90px 0;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+ /*El valor hidden esconde un elemento, pero deja (vacío) el espacio donde debería aparecer.*/
+    overflow: hidden;
+    margin: 0 auto;
+    padding: var(--padding-container);
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+   
+    gap: 1.1em;
+    --padding-container:40px 0; 
+}
+
+.nav__logo{
+    width: 110px;
+  
+}
+.nav__img{
+    width: 100%;
+ 
+}
+
+.nav__link:first-of-type{
+    margin-left: auto;
+}
+
+.nav__link{
+    text-decoration: none;
+    color: var(--DesaturatedBlue);
+   
+}
+
+.hero{
+  /*  position: relative;*/
+}
+
+.hero__img{
+    width: 100%;
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.hero__info{
+    text-align: center;
+}
+.hero__title{
+    font-size: 1.7rem;
+    font-family: var(--fontHeader);
+color: var(--VeryDarkBlue);
+margin-top: 1.8em;
+}
+
+.hero__paragraph{
+color: var(--VeryDarkBlue);
+font-size: 0.8em;
+line-height: 1.5;
+margin: 1.5em 0;
+}
+
+.hero__input{
+border: 1px solid var(--VeryDarkBlue);
+font: inherit;
+margin: 0 auto;
+padding: 0 20px;
+width: 100%;
+border-radius: 6px;
+height: 45px;
+}
+
+.hero__input::placeholder{
+    color: var(--LightGray);
+}
+
+.hero__input--cta{
+    margin: 1.2em 0;
+    background-color: var(--BrightBlue);
+    color: var(--LightGrayishBlue);
+font-weight: 700;
+   border: none;
+   cursor: pointer;
+}
+
