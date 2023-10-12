@@ -55,6 +55,7 @@ body{
     text-decoration: none;
     color: var(--DesaturatedBlue);
     position: relative; /* Agregamos posición relativa al enlace, esto es importante porque queremos que la linea esté posicionada en relación con el enlace*/
+    
   }
   
   /*::usamos after para crear un pseudo-elemento que estará justo después del contenido del enlace.*/
@@ -119,7 +120,7 @@ bottom: 0;
 .hero__title{
     font-size: 1.7rem;
     font-family: var(--fontHeader);
-margin-top: 1.8em;
+
 }
 
 .hero__paragraph{
@@ -173,7 +174,6 @@ font-weight: 700;
 
 }
 .productive__title{
-   font-size: 1.1rem;
    text-align: center;
    color: var(--VeryDarkBlue);
 font-family: var(--fontHeader);
@@ -199,7 +199,7 @@ margin: 0; /*Acá le estamos colocando un margin de 0 para que deshabilite el pa
 }
 
 .productive__arrow{
-vertical-align: middle; /*Esta propiedad es para que se coloque al medio*/
+vertical-align: bottom; /*Esta propiedad es para que se coloque al medio*/
 }
 
 .productive__testimony{
@@ -235,9 +235,285 @@ width: 25px;
 
 }
 
+.newsletter{
+    background-color: var(--DesaturatedBlue);
+    color: #fff;
+    text-align: center;
+
+}
+
+.newsletter__form{
+width: 80%;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+gap: 1em;
+margin-top: 2em;
+}
+
+.newsletter__title{
+    font-family: var(--fontHeader);
+}
+.newsletter__paragraph{
+line-height: 1.5;
+margin-top: 1.3em;
+}
+
+.newsletter__input{
+padding: 0.8em .5em;
+font: inherit;
+font-family: var(--fontHeader);
+border-radius: 3px;
+border: none;
+box-shadow: 0 0 4px rgb(0, 0, 0, .3);
+}
+
+.newsletter__submit{
+color: #fff;
+background-color: var(--BrightBlue);
+padding: 1em .5em;
+font:inherit;
+font-family: var(--fontHeader);
+border-radius: 3px;
+border: none;
+cursor: pointer;
+}
+
+.footer{
+background-color: var(--VeryDarkBlue);
+color: #fff;
+}
+.footer__container{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+   
+}
+.footer__contact{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.footer__logo{
+display: block;
+
+}
+.footer__icon{
+    vertical-align: middle;
+    margin-right: .5em;
+}
+
+.footer__info{
+    font-size: 1.2rem;
+}
+
+.footer__nav{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.footer__link{
+    text-decoration:none;
+    color: #fff;
+    font-family: var(--fontHeader);
+}
+
+
+.footer__social{
+    display: flex;
+    width: max-content;
+    margin: 0 auto;
+    gap: 1.5em;
+}
+
+.footer__media{
+    border: 1px solid #fff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-decoration: none;
+   display: flex;
+
+}
+
+.footer__img{
+    width: 20px;
+    height: 20px;
+margin: auto;
+}
+
 @media (min-width: 768px){ 
-.hero::before {
-    background-image: url(../images/bg-curve-desktop.svg);
+
+.hero{
+    --padding-container: 90px 0 200px
+}
+
+
+.hero::before{
+    background-image: url("../images/bg-curve-desktop.svg");
+
+}
+.hero__main{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 1.5em;
+    
+}
+
+.hero__img{
+    max-width: none;
+
+}
+
+.hero__info{
+    text-align: left;
+    color: var(--VeryDarkBlue);
+}
+.hero__title{
+    font-size: 2.3rem;
+
+}
+
+.hero__paragraph{
+margin: 1.5em 0;
+color: var(--DesaturatedBlue);
+line-height: 1.5;
+margin-top: 1.5em;
+font-size: var(--fontHeader);
+}
+
+.hero__contact{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+     gap: 1.5em;
+}
+.hero__input{
+min-width: 160px;
+flex-grow: 1; /*Para que ocupe todo el espacio disponible*/
+}
+
+.hero__input::placeholder{
+    color: var(--LightGray);
+}
+
+.hero__input--cta{
+flex-grow: 0;
+width: 160px;
+}
+
+
+.nav{
+    display: flex;
+    align-items: center;
+   
+    gap: 1.6em;
+   
+}
+.productive__container{
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+.productive__picture{
+    width: 45%;
+    order: 1;
+}
+
+.productive__img{
+  max-width: none
+
+}
+
+.productive__main{
+    margin-top: 0;
+    width: 52%;
+
+}
+.productive__title{
+  font-size: 2.1rem;
+  text-align: left;
+}
+
+.productive__cta{
+
+    margin: 2em 0 3em;
+
+}
+
+.productive__arrow{
+vertical-align: bottom; /*Esta propiedad es para que se coloque al medio*/
+}
+
+.productive__testimony{
+    max-width: 420px;
+    margin: 2px ;
+}
+
+/*Footer*/
+
+.newsletter__texts{
+    width: 48%;
+    max-width: 450px;
+    text-align: left;
+}
+.newsletter__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.newsletter__form{
+width: 45%;
+margin: 0;
+max-width: 500px;
+flex-wrap: wrap;
+}
+
+.newsletter__title{
+    text-align: left;
+    font-size: 1.7rem;
+}
+.newsletter__paragraph{
+line-height: 1.5;
+margin-top: 1.2em;
+
+}
+
+.newsletter__submit{
+width: max-content;
+padding: 1em 2em;
+}
+
+/*Footer*/
+.footer__container{
+ flex-wrap: wrap;
+ flex-direction: row;
+ justify-content: space-between;
+   
+}
+.footer__picture{
+    width: 100%;
+}
+.footer__contact{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+.footer__nav{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.footer__social {
+    margin: 0;
 }
 }
 
